@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bellbird · Tasteful moments in Riyadh</title>
+<meta name="description" content="Bellbird — a fine dining experience in Riyadh. Tasteful moments, a bird symphony, raw conversation." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="#home" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M22 11c-3 0-7 2-9 5-2-3-6-5-9-5 3 0 7 2 9 5 2-3 6-5 9-5z"/>
+      <circle cx="12" cy="16" r="1" fill="currentColor"/>
+    </svg>
+    Bellbird<span class="dot"></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+  </ul>
+  <button class="nav-reserve" id="navReserve">Reserve</button>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg-img" id="heroBg"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-sun"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-birds">
+    <svg class="bird bird-1" viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14 Q 10 4, 20 12 Q 30 4, 38 14"/></svg>
+    <svg class="bird bird-2" viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14 Q 10 4, 20 12 Q 30 4, 38 14"/></svg>
+    <svg class="bird bird-3" viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14 Q 10 4, 20 12 Q 30 4, 38 14"/></svg>
+    <svg class="bird bird-4" viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14 Q 10 4, 20 12 Q 30 4, 38 14"/></svg>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-kicker" id="heroKicker">Riyadh · Saudi Arabia</span>
+    <h1 class="hero-title" id="heroTitle">Bellbird</h1>
+    <p class="hero-tagline" id="heroTagline">
+      <span>Tasteful moments</span><span class="sep">·</span><span>A bird symphony</span><span class="sep">·</span><span>Raw conversation</span>
+    </p>
+    <button class="hero-reserve" id="heroReserve">Reserve a Table</button>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════ TAGLINES ═══════════════ -->
+<section class="taglines" id="philosophy">
+  <div class="taglines-eyebrow">The Bellbird Philosophy</div>
+  <p class="tagline-line" data-stagger>Tasteful moments</p>
+  <p class="tagline-line italic" data-stagger>A bird symphony</p>
+  <p class="tagline-line olive" data-stagger>Raw conversation</p>
+  <p class="taglines-arabic" data-stagger>لحظات مليئة بالذوق · سيمفونية عصفور · حوار صادق</p>
+</section>
+
+<!-- ═══════════════ INFO ═══════════════ -->
+<section class="info" id="visit">
+  <div class="info-grid">
+    <div class="info-block">
+      <div class="info-decoration">06</div>
+      <div class="info-label">Working Hours</div>
+      <h2 class="info-hours">6am<span class="ampm">—</span>4pm</h2>
+      <div class="info-status">
+        <span class="status-dot"></span>
+        <span>Open Now · Closes at 4:00 PM</span>
+      </div>
+      <div class="info-line">
+        <svg viewBox="0 0 500 2" preserveAspectRatio="none"><path d="M0,1 Q125,0 250,1 T500,1" /></svg>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-label">Find Us</div>
+      <h3 class="info-address">Bellbird.SA</h3>
+      <p class="info-address-detail">
+        3739, 5th Ave, RARB7241<br/>
+        7241 Al Thoumanah Rd<br/>
+        Riyadh, Saudi Arabia 13315
+      </p>
+      <a class="map-icon-wrap" href="https://maps.google.com/?q=Riyadh Saudi Arabia" target="_blank" rel="noopener">
+        <div class="map-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <g class="map-pin">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </g>
+          </svg>
+        </div>
+        Open in Maps
+      </a>
+      <div class="info-line">
+        <svg viewBox="0 0 500 2" preserveAspectRatio="none"><path d="M0,1 Q125,2 250,1 T500,1" /></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MENU SHOWCASE ═══════════════ -->
+<section class="menu" id="menu">
+  <div class="menu-header">
+    <div class="menu-title-block">
+      <div class="menu-eyebrow">The Menu</div>
+      <h2 class="menu-title">Three <span class="italic">movements</span><br/>of the day</h2>
+    </div>
+    <p class="menu-description">
+      Each service at Bellbird is composed like a movement in a symphony — distinct in character, rooted in season, and served with quiet intention.
+    </p>
+  </div>
+
+  <div class="menu-grid">
+    <!-- BREAKFAST -->
+    <article class="menu-card menu-card-1" data-menu-card>
+      <div class="menu-card-image">
+        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" alt="Saffron French Toast — Bellbird breakfast" loading="lazy" />
+        <span class="menu-card-number">01</span>
+        <span class="menu-card-time">06:00 — 11:00</span>
+        <div class="menu-card-image-label">
+          <div class="label-en">Morning</div>
+          <div class="label-dish">Saffron French Toast</div>
+        </div>
+      </div>
+      <div class="menu-card-body">
+        <h3 class="menu-card-title">Breakfast</h3>
+        <p class="menu-card-arabic">فطور العيد</p>
+        <div class="menu-card-divider"></div>
+        <ul class="menu-card-items">
+          <li><span class="menu-item-name">Saffron French Toast</span><span class="menu-item-price">48 SAR</span></li>
+          <li><span class="menu-item-name">Date & Cardamom Porridge</span><span class="menu-item-price">36 SAR</span></li>
+          <li><span class="menu-item-name">Pomegranate Labneh</span><span class="menu-item-price">42 SAR</span></li>
+          <li><span class="menu-item-name">Arabic Coffee Service</span><span class="menu-item-price">28 SAR</span></li>
+        </ul>
+        <a href="#" class="menu-card-cta">
+          View Full Menu
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- LUNCH -->
+    <article class="menu-card menu-card-2" data-menu-card>
+      <div class="menu-card-image">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Sumac seared lamb — Bellbird lunch" loading="lazy" />
+        <span class="menu-card-number">02</span>
+        <span class="menu-card-time">11:00 — 14:30</span>
+        <div class="menu-card-image-label">
+          <div class="label-en">Midday</div>
+          <div class="label-dish">Sumac Seared Lamb</div>
+        </div>
+      </div>
+      <div class="menu-card-body">
+        <h3 class="menu-card-title">Lunch</h3>
+        <p class="menu-card-arabic">إيد بريفاست</p>
+        <div class="menu-card-divider"></div>
+        <ul class="menu-card-items">
+          <li><span class="menu-item-name">Roasted Aubergine Tahini</span><span class="menu-item-price">62 SAR</span></li>
+          <li><span class="menu-item-name">Sumac Seared Lamb</span><span class="menu-item-price">118 SAR</span></li>
+          <li><span class="menu-item-name">Herb Crusted Halibut</span><span class="menu-item-price">134 SAR</span></li>
+          <li><span class="menu-item-name">Burnt Honey Citrus</span><span class="menu-item-price">44 SAR</span></li>
+        </ul>
+        <a href="#" class="menu-card-cta">
+          View Full Menu
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- DINNER -->
+    <article class="menu-card menu-card-3" data-menu-card>
+      <div class="menu-card-image">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Charcoal smoked short rib — Bellbird dinner" loading="lazy" />
+        <span class="menu-card-number">03</span>
+        <span class="menu-card-time">By reservation</span>
+        <div class="menu-card-image-label">
+          <div class="label-en">Evening</div>
+          <div class="label-dish">Charcoal Smoked Short Rib</div>
+        </div>
+      </div>
+      <div class="menu-card-body">
+        <h3 class="menu-card-title">Dinner</h3>
+        <p class="menu-card-arabic">عشاء</p>
+        <div class="menu-card-divider"></div>
+        <ul class="menu-card-items">
+          <li><span class="menu-item-name">Charcoal Smoked Short Rib</span><span class="menu-item-price">186 SAR</span></li>
+          <li><span class="menu-item-name">Saffron Risotto Gold</span><span class="menu-item-price">142 SAR</span></li>
+          <li><span class="menu-item-name">Black Garlic Duck</span><span class="menu-item-price">164 SAR</span></li>
+          <li><span class="menu-item-name">Dark Chocolate & Tahini</span><span class="menu-item-price">58 SAR</span></li>
+        </ul>
+        <a href="#" class="menu-card-cta">
+          View Full Menu
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ═══════════════ GALLERY ═══════════════ -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <div class="gallery-title-block">
+      <div class="gallery-eyebrow">From our kitchen</div>
+      <h2 class="gallery-title">Plates, moments<br/><span class="italic">& quiet rituals</span></h2>
+    </div>
+    <a href="https://instagram.com/bellbird" target="_blank" rel="noopener" class="gallery-link">
+      More on Instagram
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item large">
+      <img src="https://images.unsplash.com/photo-1606914511092-6543ddc2e9d8?auto=format&fit=crop&w=800&q=80" alt="Signature plating" loading="lazy" />
+      <div class="gallery-item-caption">Saffron risotto, plated with intention</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" alt="Morning light, coffee" loading="lazy" />
+      <div class="gallery-item-caption">Arabic coffee, golden hour</div>
+    </div>
+    <div class="gallery-item tall">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80" alt="Date dessert" loading="lazy" />
+      <div class="gallery-item-caption">Date & dark chocolate</div>
+    </div>
+    <div class="gallery-item wide">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Table spread" loading="lazy" />
+      <div class="gallery-item-caption">The shared table</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=80" alt="Plated dish" loading="lazy" />
+      <div class="gallery-item-caption">Citrus, herb, sea salt</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&q=80" alt="Chef hands" loading="lazy" />
+      <div class="gallery-item-caption">The quiet hands</div>
+    </div>
+    <div class="gallery-item wide">
+      <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=800&q=80" alt="Dining room" loading="lazy" />
+      <div class="gallery-item-caption">The room, before service</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STATS ═══════════════ -->
+<section class="stats">
+  <div class="stats-bg-text">Bellbird</div>
+  <div class="stats-header">
+    <div class="stats-eyebrow">A quiet following</div>
+    <h2 class="stats-title">A community gathered around <span class="italic">simple honesty</span></h2>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-block">
+      <div class="stat-number" data-count="32">0</div>
+      <div class="stat-label">Posts</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-number" data-count="21.8" data-suffix="k" data-decimals="1">0</div>
+      <div class="stat-label">Followers</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-number" data-count="0">0</div>
+      <div class="stat-label">Following</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WEATHER + CTA ═══════════════ -->
+<section class="cta-weather">
+  <div class="cta-weather-grid">
+    <div class="weather-widget">
+      <div class="weather-top">
+        <div>
+          <div class="weather-location">Today in</div>
+          <div class="weather-city">Riyadh, SA</div>
+        </div>
+        <div class="weather-icon">
+          <div class="weather-icon-rays" id="weatherRays"></div>
+          <div class="weather-icon-sun"></div>
+        </div>
+      </div>
+      <div>
+        <div class="weather-temp">38<span class="degree">°C</span></div>
+        <div class="weather-condition">Mostly Sunny · Light breeze from the north</div>
+        <div class="weather-meta">
+          <span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 8v6m10-10h-6M8 12H2"/></svg>
+            18% humidity
+          </span>
+          <span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h12M3 6h18M3 18h15"/></svg>
+            9 km/h wind
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <div>
+        <div class="cta-eyebrow">Stay Connected</div>
+        <h2 class="cta-title">Follow the <span class="italic">symphony</span> on Instagram</h2>
+        <p class="cta-text">
+          Behind-the-scenes moments, plating rituals, and the quiet poetry of a kitchen in motion — shared regularly with our community at @bellbird.
+        </p>
+      </div>
+      <a href="https://instagram.com/bellbird" target="_blank" rel="noopener" class="cta-button">
+        <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        Follow @bellbird
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 11c-3 0-7 2-9 5-2-3-6-5-9-5 3 0 7 2 9 5 2-3 6-5 9-5z"/>
+          <circle cx="12" cy="16" r="1" fill="currentColor"/>
+        </svg>
+        Bellbird
+      </div>
+      <p class="footer-tagline">Tasteful moments · A bird symphony · Raw conversation</p>
+      <p class="footer-desc">
+        A fine dining experience in the heart of Riyadh, where the kitchen listens before it speaks, and every plate arrives as a quiet sentence in an ongoing conversation.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#visit">Hours & Location</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#">Private Dining</a></li>
+        <li><a href="#">Reservations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">The Team</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://instagram.com/bellbird" target="_blank">Instagram</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="mailto:hello@bellbird.sa">Email</a></li>
+        <li><a href="#">+966 11 123 4567</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Bellbird. All rights reserved. <span class="arabic">جميع الحقوق محفوظة</span></span>
+    <span>Crafted with intention in Riyadh</span>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
